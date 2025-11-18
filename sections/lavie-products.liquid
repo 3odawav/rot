@@ -1,0 +1,98 @@
+<section class="page-width lavie-products">
+  <div class="grid grid--3-col">
+    {%- for block in section.blocks -%}
+      <div class="product-card" style="text-align:center;margin-bottom:2rem;">
+        {%- if block.settings.image -%}
+          <img src="{{ block.settings.image | asset_url }}" alt="{{ block.settings.title | escape }}" style="max-width:100%;height:auto;" />
+        {%- endif -%}
+        <h3 style="font-family:'Sofia Pro', sans-serif;margin-top:1rem;">{{ block.settings.title }}</h3>
+        <p style="font-family:'Neue Haas Grotesk Display Pro', sans-serif;color:#666;margin-top:0.5rem;">{{ block.settings.description }}</p>
+        {%- if block.settings.price != blank -%}
+          <div class="price" style="font-weight:bold;margin-top:0.5rem;">{{ block.settings.price }}</div>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lavie Products",
+  "tag": "section",
+  "class": "section section--lavie-products",
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "" },
+        { "type": "text", "id": "price", "label": "Price", "default": "" },
+        { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    }
+  ],
+  "max_blocks": 16,
+  "presets": [
+    {
+      "name": "Lavie Products",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "title": "LAVIE Brazilian Natural Spices Hair Mask",
+            "description": "Keratin Deep Conditioning Treatment",
+            "price": "EGP 600.00",
+            "image": "lavie_product_1.png"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "title": "LAVIE Absolute Protein Brazilian",
+            "description": "Keratin Straightening Treatment – All Hair Types",
+            "price": "EGP 4000.00",
+            "image": "lavie_product_2.png"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "title": "LAVIE Brazilian Natural Spices Conditioner",
+            "description": "Daily Hydrating Hair Conditioner – 300ml",
+            "price": "EGP 450.00",
+            "image": "lavie_product_3.png"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "title": "LAVIE Brazilian Natural Spices Shampoo",
+            "description": "Daily Hydrating Hair Shampoo – 300ml",
+            "price": "EGP 420.00",
+            "image": "lavie_product_4.png"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "title": "LAVIE Tropical",
+            "description": "Straightening Treatment for Blonde & Gray Hair",
+            "price": "EGP 3900.00",
+            "image": "lavie_product_5.png"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "title": "LAVIE Deep Repair",
+            "description": "3‑in‑1 Multi‑Use Hair Treatment & Heat Protection Spray",
+            "price": "EGP 450.00",
+            "image": "lavie_product_6.png"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

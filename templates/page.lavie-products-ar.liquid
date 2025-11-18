@@ -1,0 +1,12 @@
+{%- comment -%}
+  Arabic page template to display La Vie products. The content is wrapped
+  in a right‑to‑left container to ensure proper alignment for Arabic text.
+  It uses the same lavie-products section since product names and prices
+  remain consistent across languages.
+{%- endcomment -%}
+
+{% layout 'theme' %}
+
+<div dir="rtl">
+  {% section 'lavie-products' %}
+</div>

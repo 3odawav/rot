@@ -1,0 +1,7 @@
+/* Custom font overrides for La Vie theme */
+body {
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sofia Pro', sans-serif;
+}

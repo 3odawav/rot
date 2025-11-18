@@ -1,0 +1,10 @@
+{%- comment -%}
+  Custom page template to display the La Vie products list in English.
+  This template uses the lavie-products section which pulls product data
+  from a JSON file and renders product cards. It leverages the existing
+  theme layout so it inherits the header and footer.
+{%- endcomment -%}
+
+{% layout 'theme' %}
+
+{% section 'lavie-products' %}

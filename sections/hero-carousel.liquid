@@ -1,0 +1,26 @@
+{%- comment -%}
+  A simple hero carousel section that cycles through four images using CSS animations.
+{%- endcomment -%}
+
+<section class="hero-carousel-section">
+  <div class="hero-carousel">
+    <div class="hero-slide" style="background-image: url('{{ 'hero1.jpg' | asset_url }}');"></div>
+    <div class="hero-slide" style="background-image: url('{{ 'hero2.png' | asset_url }}');"></div>
+    <div class="hero-slide" style="background-image: url('{{ 'hero3.png' | asset_url }}');"></div>
+    <div class="hero-slide" style="background-image: url('{{ 'hero4.png' | asset_url }}');"></div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Carousel",
+  "tag": "section",
+  "class": "section-hero-carousel",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Hero Carousel"
+    }
+  ]
+}
+{% endschema %}
